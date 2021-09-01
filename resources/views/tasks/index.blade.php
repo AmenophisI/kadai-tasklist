@@ -6,13 +6,13 @@
 
 @if(count($tasks)>0)
     <table class="table table-striped">
-        <thred>
+        <thead>
             <tr>
                 <th>id</th>
                 <th>タスク</th>
                 <th>ステータス</th>
             </tr>
-        </thred>
+        </thead>
         <tbody>
             @foreach ($tasks as $task)
                 <tr>
@@ -24,6 +24,10 @@
         </tbody>
     </table>
 @endif
+
+{{-- ページネーションのリンク --}}
+{{ $tasks->links() }}
+
 {!! link_to_route('tasks.create','新規タスクの投稿',[],['class'=>'btn btn-primary']) !!}
 
 @endsection
