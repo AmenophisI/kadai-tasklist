@@ -2,7 +2,9 @@
 
 @section('content')
     @if (Auth::check())
-        {{ Auth::user()->name }}
+        {{-- 投稿一覧 --}}
+        @include('tasks.index')
+        {!! link_to_route('tasks.create','新規タスクの投稿',[],['class'=>'btn btn-primary']) !!}
     @else
         <div class="center jumbotron">
             <div class="text-center">

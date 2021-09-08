@@ -4,13 +4,14 @@
 
 <h1>id {{ $task->id }}の詳細</h1>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-striped">
     <tr>
         <th>id</th>
-        <th>{{ $task->id }}</th>
+        <th>タスク</th>
+        <th>ステータス</th>
     </tr>
     <tr>
-        <th>タスク</th>
+        <th>{{ $task->id }}</th>
         <th>{{ $task->content }}</th>
         <th>{{ $task->status }}</th>
     </tr>
